@@ -38,6 +38,7 @@
   - [Download Multibeast](https://www.tonymacx86.com/resources/multibeast-high-sierra-10-2-0.360/)
 - [CustoMac budget build](https://www.tonymacx86.com/buyersguide/february/2018/#CustoMac_Budget_ATX)
 - [Working build configuration with Gigabyte H270-HD3P](https://www.tonymacx86.com/threads/gigabyte-ga-h270-hd3-geforce-gtx-1050-ti-4gt.230212/)
+  - links to fixing sound
 - [NVIDIA driver troubleshooting guide](https://www.tonymacx86.com/threads/solving-nvidia-driver-install-loading-problems.161256)
   - [Install NVIDIA web driver](http://www.insanelymac.com/forum/topic/324195-nvidia-web-driver-updates-for-macos-high-sierra-update-10062017/)
 
@@ -52,3 +53,12 @@
 #### Graphics selection is not remembered in NVIDIA driver manager [solved]
 
 -  [Solution](https://www.tonymacx86.com/threads/solving-nvidia-driver-install-loading-problems.161256/#Problem6)
+
+#### Fix sound (the belly of the beast)
+
+- **Do not install ACL887/legacy driver from multibeast because it does not work**
+- Install [KextBeast](https://www.tonymacx86.com/resources/categories/tonymacx86-downloads.3/) 
+- Download latest file from [RehabMan Fake PCIID](https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads/)
+  - Inject *FakePCIID.kext* and *FakePCIID_Intel_HDMI_Audio.kext* using KextBeast
+- Clone [audio clover](https://github.com/toleda/audio_CloverALC) repo
+  - run *audio_cloverALC-130_v0.x.command*
