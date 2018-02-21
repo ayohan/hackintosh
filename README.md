@@ -54,11 +54,15 @@
 
 -  [Solution](https://www.tonymacx86.com/threads/solving-nvidia-driver-install-loading-problems.161256/#Problem6)
 
-#### Fix sound (the belly of the beast)
+#### Sound not working. No device found [solved]
 
 - **Do not install ACL887/legacy driver from multibeast because it does not work**
 - Install [KextBeast](https://www.tonymacx86.com/resources/categories/tonymacx86-downloads.3/) 
-- Download latest file from [RehabMan Fake PCIID](https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads/)
-  - Inject *FakePCIID.kext* and *FakePCIID_Intel_HDMI_Audio.kext* using KextBeast
+- Install [EFI Mounter](https://www.tonymacx86.com/resources/efi-mounter-v3.280/)
+  - Unplug all USBs and drives other than what Mac OS is running on
+  - Choose Mount option
 - Clone [audio clover](https://github.com/toleda/audio_CloverALC) repo
   - run *audio_cloverALC-130_v0.x.command*
+    - Yes to all prompts
+- Download latest file from [RehabMan Fake PCIID](https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads/)
+  - Inject *FakePCIID.kext* and *FakePCIID_Intel_HDMI_Audio.kext* using KextBeast
