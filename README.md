@@ -44,6 +44,12 @@
 
 
 
+_Multibeast configs_
+
+![multibeast](multibeast-configs.png)
+
+
+
 ## Troubleshooting
 
 #### Stuck in apple logo on installation [solved]
