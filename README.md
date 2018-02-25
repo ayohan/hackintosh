@@ -1,4 +1,4 @@
-# Hackintosh build
+# Hackintosh build (Sierra)
 
 ## Hardware
 
@@ -33,20 +33,21 @@
 
 ## Resources
 
-- [Install MacOS High Sierra (10.13.x) guide](https://www.tonymacx86.com/threads/unibeast-install-macos-high-sierra-on-any-supported-intel-based-pc.235474/#download)
-  - [Download Unibeast](https://www.tonymacx86.com/resources/unibeast-8-1-0.353/v)
-  - [Download Multibeast](https://www.tonymacx86.com/resources/multibeast-high-sierra-10-2-0.360/)
+- [Install MacOS Sierra (10.12.x) guide](https://www.tonymacx86.com/threads/unibeast-install-macos-sierra-on-any-supported-intel-based-pc.200564/)
+  - [Download Unibeast 7](https://www.tonymacx86.com/resources/unibeast-7-1-1.333/)
+  - [Download Multibeast 9](https://www.tonymacx86.com/resources/multibeast-sierra-9-2-1.370/)
 - [CustoMac budget build](https://www.tonymacx86.com/buyersguide/february/2018/#CustoMac_Budget_ATX)
 - [Working build configuration with Gigabyte H270-HD3P](https://www.tonymacx86.com/threads/gigabyte-ga-h270-hd3-geforce-gtx-1050-ti-4gt.230212/)
   - links to fixing sound
 - [NVIDIA driver troubleshooting guide](https://www.tonymacx86.com/threads/solving-nvidia-driver-install-loading-problems.161256)
-  - [Install NVIDIA web driver](http://www.insanelymac.com/forum/topic/324195-nvidia-web-driver-updates-for-macos-high-sierra-update-10062017/)
+  - [Install NVIDIA web driver](https://www.tonymacx86.com/nvidia-drivers/)
+  ![identify-nvidia-web-driver](images/identify-nvidia-web-driver.png)
 
 
 
 _Multibeast configs_
 
-![multibeast](multibeast-configs.png)
+![multibeast](images/multibeast-configs.png)
 
 
 
@@ -63,11 +64,15 @@ _Multibeast configs_
 #### Sound not working. No device found [solved]
 
 - **Do not install ACL887/legacy driver from multibeast because it does not work**
-- Install [KextBeast](https://www.tonymacx86.com/resources/categories/tonymacx86-downloads.3/) 
+- Install [KextBeast](https://www.tonymacx86.com/resources/categories/tonymacx86-downloads.3/)
 - Install [EFI Mounter](https://www.tonymacx86.com/resources/efi-mounter-v3.280/)
   - Unplug all USBs and drives other than what Mac OS is running on
   - Choose Mount option
-- Clone [audio clover](https://github.com/toleda/audio_CloverALC) repo
+- Clone [audio_ALCInjection](https://github.com/toleda/audio_ALCInjection) repo
+  - Go to ssdt_hdef directory
+  - Unzip ssdt_hdef-1-100-hdas.zip
+  - Move SSDT-HDEF-HDAS-1.aml file to _EFI/CLOVER/ACPI/patched/_
+- Clone [audio_CloverALC](https://github.com/toleda/audio_CloverALC) repo
   - run *audio_cloverALC-130_v0.x.command*
     - Yes to all prompts
 - Download latest file from [RehabMan Fake PCIID](https://bitbucket.org/RehabMan/os-x-fake-pci-id/downloads/)
